@@ -15,10 +15,7 @@ public class SelectionSort {
                     minimumIndex = j;
                 }
             }
-            T temp = copyElements.get(minimumIndex);
-            copyElements.set(minimumIndex, copyElements.get(i));
-            copyElements.set(i, temp);
-
+            SwapElement.swap(copyElements,i,minimumIndex);
         }
         return copyElements;
     }
@@ -26,7 +23,7 @@ public class SelectionSort {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(23, 10, 14, 67, 4, -4);
         System.out.println(sort(numbers));
-        List<String> strings = Arrays.asList("b", "a", "d", "z", "c", "z", "b");
+        List<String> strings = Arrays.asList("b", "a", "d", "z", "c", "z", "ba");
         System.out.println(sort(strings));
     }
 }
